@@ -4,30 +4,42 @@
     <meta charset="UTF-8">
     <title>Safiya's Portfolio</title>
     <style>
+        /* ---------- General Styles ---------- */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-color: #ffe6f0; /* pastel pink background */
+            background-color: #ffe6f0; /* pastel pink */
             color: #333;
         }
 
+        a { text-decoration: none; color: inherit; }
+
+        /* ---------- Header ---------- */
         header {
             background: linear-gradient(90deg, #ffb3c6, #ffcce6);
-            color: #fff;
-            padding: 30px 20px;
+            color: white;
             text-align: center;
+            padding: 40px 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         header h1 {
-            margin: 0;
+            margin: 10px 0;
             font-size: 3rem;
         }
 
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-top: 10px;
+            object-fit: cover;
+        }
+
         nav {
-            text-align: center;
             margin-top: 15px;
         }
 
@@ -38,36 +50,37 @@
             cursor: pointer;
             font-size: 1rem;
             border-radius: 8px;
-            background-color: #fff;
+            background-color: white;
             color: #ff4d94;
             transition: 0.3s;
         }
 
         nav button:hover {
             background-color: #ff4d94;
-            color: #fff;
+            color: white;
         }
 
+        /* ---------- Sections ---------- */
         section {
             max-width: 800px;
             margin: 40px auto;
-            padding: 0 20px;
-            background-color: #fff0f6;
+            padding: 30px 20px;
+            background-color: #fff0f6; /* lighter pink */
             border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            padding: 30px;
         }
 
         h2 {
             color: #ff4d94;
-            margin-top: 30px;
             font-size: 2rem;
+            margin-bottom: 15px;
         }
 
         p {
             font-size: 1.1rem;
         }
 
+        /* ---------- Skills ---------- */
         .skills li {
             margin: 15px 0;
         }
@@ -79,9 +92,9 @@
             overflow: hidden;
         }
 
+        /* ---------- Contact ---------- */
         .contact a {
             color: #ff4d94;
-            text-decoration: none;
             font-weight: bold;
         }
 
@@ -89,6 +102,7 @@
             text-decoration: underline;
         }
 
+        /* ---------- Footer ---------- */
         footer {
             background: linear-gradient(90deg, #ffb3c6, #ffcce6);
             color: white;
@@ -97,24 +111,35 @@
             margin-top: 40px;
         }
 
+        /* ---------- Responsive ---------- */
+        @media(max-width: 600px){
+            header h1 { font-size: 2.2rem; }
+            nav button { padding: 6px 12px; font-size: 0.9rem; }
+            section { margin: 20px 10px; padding: 20px; }
+            header img { width: 120px; height: 120px; }
+        }
     </style>
 </head>
 <body>
 
+    <!-- ---------- Header ---------- -->
     <header>
+        <img src="https://github.com/safiyafathima011-hash/portfolio/blob/main/WhatsApp%20Image%202026-01-31%20at%2012.41.43%20AM.jpeg?raw=true" alt="Profile Picture">
         <h1>Safiya Fathima</h1>
         <nav>
-            <button>About</button>
-            <button>Skills</button>
-            <button>Contact</button>
+            <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</button>
+            <button onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">Skills</button>
+            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</button>
         </nav>
     </header>
 
+    <!-- ---------- About ---------- -->
     <section id="about">
         <h2>About Me</h2>
         <p>Hello! I am Safiya Fathima, a passionate web developer learning front-end technologies. I enjoy creating clean, functional websites and continuously improving my coding skills. Currently, I am pursuing my studies and exploring new technologies like HTML, CSS, JavaScript, Python, and C.</p>
     </section>
 
+    <!-- ---------- Skills ---------- -->
     <section id="skills">
         <h2>My Skills</h2>
         <ul class="skills">
@@ -125,14 +150,16 @@
         </ul>
     </section>
 
+    <!-- ---------- Contact ---------- -->
     <section id="contact">
         <h2>Contact Me</h2>
         <p>Feel free to get in touch with me!</p>
         <p>Email: <a href="mailto:safiyafathima011@gmail.com">safiyafathima011@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/safiya-fathima">Safiya Fathima</a></p>
-        <p>GitHub: <a href="https://github.com/SafiyaFathima">SafiyaFathima</a></p>
+        <p>GitHub: <a href="https://github.com/safiyafathima011-hash">safiyafathima011-hash</a></p>
     </section>
 
+    <!-- ---------- Footer ---------- -->
     <footer>
         &copy; 2026 Safiya Fathima | All Rights Reserved
     </footer>
